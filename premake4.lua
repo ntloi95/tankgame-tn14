@@ -1,5 +1,5 @@
 -- A solution contains projects, and defines the available configurations
-solution "tankgame-tn13"
+solution "tankgame-tn14"
    configurations {"Debug", "Release"}
 
    configuration "Debug"
@@ -11,7 +11,7 @@ solution "tankgame-tn13"
       flags "Optimize"   
 
    -- A project defines one build target
-   project "tankgame-tn13"
+   project "tankgame-tn14"
       kind "ConsoleApp"
       language "C++"
       files { "**.h", "**.cpp", "**.c", "**.hpp" }

@@ -6,18 +6,18 @@ ifndef config
 endif
 export config
 
-PROJECTS := tankgame-tn13
+PROJECTS := tankgame-tn14
 
 .PHONY: all clean help $(PROJECTS)
 
 all: $(PROJECTS)
 
-tankgame-tn13: 
-	@echo "==== Building tankgame-tn13 ($(config)) ===="
-	@${MAKE} --no-print-directory -C . -f tankgame-tn13.make
+tankgame-tn14: 
+	@echo "==== Building tankgame-tn14 ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f tankgame-tn14.make
 
 clean:
-	@${MAKE} --no-print-directory -C . -f tankgame-tn13.make clean
+	@${MAKE} --no-print-directory -C . -f tankgame-tn14.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -29,6 +29,6 @@ help:
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
-	@echo "   tankgame-tn13"
+	@echo "   tankgame-tn14"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"

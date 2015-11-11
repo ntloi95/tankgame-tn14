@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C309B8FC-727D-F029-F4AA-F1EE8BD4C27B}</ProjectGuid>
-    <RootNamespace>tankgame-tn13</RootNamespace>
+    <ProjectGuid>{191670F6-8403-15D5-21DD-6B4BA88956C9}</ProjectGuid>
+    <RootNamespace>tankgame-tn14</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -39,14 +39,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>bin\</OutDir>
     <IntDir>obj\Debug\</IntDir>
-    <TargetName>tankgame-tn13</TargetName>
+    <TargetName>tankgame-tn14</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>bin\</OutDir>
     <IntDir>obj\Release\</IntDir>
-    <TargetName>tankgame-tn13</TargetName>
+    <TargetName>tankgame-tn14</TargetName>
     <TargetExt>.exe</TargetExt>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -62,7 +62,7 @@
       <PrecompiledHeader></PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <ProgramDataBaseFileName>$(OutDir)tankgame-tn13.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)tankgame-tn14.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>DEBUG;cimg_use_png;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -72,7 +72,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>user32.lib;gdi32.lib;shell32.lib;libpng16.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)tankgame-tn13.exe</OutputFile>
+      <OutputFile>$(OutDir)tankgame-tn14.exe</OutputFile>
       <AdditionalLibraryDirectories>lib\win\vs2010-debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
@@ -100,7 +100,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>user32.lib;gdi32.lib;shell32.lib;libpng16.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)tankgame-tn13.exe</OutputFile>
+      <OutputFile>$(OutDir)tankgame-tn14.exe</OutputFile>
       <AdditionalLibraryDirectories>lib\win\vs2010-release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
@@ -142,33 +142,6 @@
     <ClInclude Include="src\internal\MapInfo.h" />
     <ClInclude Include="src\internal\MapLoader.h" />
     <ClInclude Include="src\internal\TileManager.h" />
-    <ClInclude Include="src\players\Nhom01\Graph.h" />
-    <ClInclude Include="src\players\Nhom01\Nhom01Player.h" />
-    <ClInclude Include="src\players\Nhom02\Nhom02Player.h" />
-    <ClInclude Include="src\players\Nhom03\Nhom03Player.h" />
-    <ClInclude Include="src\players\Nhom04\Nhom04Player.h" />
-    <ClInclude Include="src\players\Nhom05\Nhom05Player.h" />
-    <ClInclude Include="src\players\Nhom06\Nhom06Player.h" />
-    <ClInclude Include="src\players\Nhom07\Nhom07Player.h" />
-    <ClInclude Include="src\players\Nhom08\Nhom08Player.h" />
-    <ClInclude Include="src\players\Nhom09\FirstStrategy.h" />
-    <ClInclude Include="src\players\Nhom09\IStrategy.h" />
-    <ClInclude Include="src\players\Nhom09\Matrix.h" />
-    <ClInclude Include="src\players\Nhom09\Nhom09Player.h" />
-    <ClInclude Include="src\players\Nhom09\SecondStrategy.h" />
-    <ClInclude Include="src\players\Nhom10\Nhom10Player.h" />
-    <ClInclude Include="src\players\Nhom11\Nhom11Player.h" />
-    <ClInclude Include="src\players\Nhom12\MY_AllLib.h" />
-    <ClInclude Include="src\players\Nhom12\MY_AllStage.h" />
-    <ClInclude Include="src\players\Nhom12\MY_IStage.h" />
-    <ClInclude Include="src\players\Nhom12\MY_Special1.h" />
-    <ClInclude Include="src\players\Nhom12\MY_Stage1.h" />
-    <ClInclude Include="src\players\Nhom12\MY_Strategy.h" />
-    <ClInclude Include="src\players\Nhom12\Nhom12Player.h" />
-    <ClInclude Include="src\players\Nhom13\Nhom13Player.h" />
-    <ClInclude Include="src\players\Nhom14\Nhom14Player.h" />
-    <ClInclude Include="src\players\Nhom14\Nhom14PlayerControl.h" />
-    <ClInclude Include="src\players\Nhom15\Nhom15Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BasePlayer.cpp">
@@ -206,52 +179,6 @@
     <ClCompile Include="src\internal\MapLoader.cpp">
     </ClCompile>
     <ClCompile Include="src\internal\TileManager.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom01\Nhom01Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom02\Nhom02Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom03\Nhom03Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom04\Nhom04Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom05\Nhom05Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom06\Nhom06Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom07\Nhom07Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom08\Nhom08Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom09\FirstStrategy.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom09\Matrix.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom09\Nhom09Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom09\SecondStrategy.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom10\Nhom10Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom11\Nhom11Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom12\MY_IStage.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom12\MY_Special1.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom12\MY_Stage1.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom12\MY_Strategy.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom12\Nhom12Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom13\Nhom13Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom14\Nhom14Player.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom14\Nhom14PlayerControl.cpp">
-    </ClCompile>
-    <ClCompile Include="src\players\Nhom15\Nhom15Player.cpp">
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

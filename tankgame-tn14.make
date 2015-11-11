@@ -22,7 +22,7 @@ endif
 ifeq ($(config),debug)
   OBJDIR     = obj/Debug
   TARGETDIR  = bin
-  TARGET     = $(TARGETDIR)/tankgame-tn13
+  TARGET     = $(TARGETDIR)/tankgame-tn14
   DEFINES   += -DDEBUG -Dcimg_use_png
   INCLUDES  += -I/usr/X11R6/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -44,7 +44,7 @@ endif
 ifeq ($(config),release)
   OBJDIR     = obj/Release
   TARGETDIR  = bin
-  TARGET     = $(TARGETDIR)/tankgame-tn13
+  TARGET     = $(TARGETDIR)/tankgame-tn14
   DEFINES   += -DNDEBUG -Dcimg_use_png
   INCLUDES  += -I/usr/X11R6/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -82,29 +82,6 @@ OBJECTS := \
 	$(OBJDIR)/GameCreator.o \
 	$(OBJDIR)/MapLoader.o \
 	$(OBJDIR)/TileManager.o \
-	$(OBJDIR)/Nhom01Player.o \
-	$(OBJDIR)/Nhom02Player.o \
-	$(OBJDIR)/Nhom03Player.o \
-	$(OBJDIR)/Nhom04Player.o \
-	$(OBJDIR)/Nhom05Player.o \
-	$(OBJDIR)/Nhom06Player.o \
-	$(OBJDIR)/Nhom07Player.o \
-	$(OBJDIR)/Nhom08Player.o \
-	$(OBJDIR)/FirstStrategy.o \
-	$(OBJDIR)/Matrix.o \
-	$(OBJDIR)/Nhom09Player.o \
-	$(OBJDIR)/SecondStrategy.o \
-	$(OBJDIR)/Nhom10Player.o \
-	$(OBJDIR)/Nhom11Player.o \
-	$(OBJDIR)/MY_IStage.o \
-	$(OBJDIR)/MY_Special1.o \
-	$(OBJDIR)/MY_Stage1.o \
-	$(OBJDIR)/MY_Strategy.o \
-	$(OBJDIR)/Nhom12Player.o \
-	$(OBJDIR)/Nhom13Player.o \
-	$(OBJDIR)/Nhom14Player.o \
-	$(OBJDIR)/Nhom14PlayerControl.o \
-	$(OBJDIR)/Nhom15Player.o \
 
 RESOURCES := \
 
@@ -122,7 +99,7 @@ all: $(TARGETDIR) $(OBJDIR) prebuild prelink $(TARGET)
 	@:
 
 $(TARGET): $(GCH) $(OBJECTS) $(LDDEPS) $(RESOURCES)
-	@echo Linking tankgame-tn13
+	@echo Linking tankgame-tn14
 	$(SILENT) $(LINKCMD)
 	$(POSTBUILDCMDS)
 
@@ -143,7 +120,7 @@ else
 endif
 
 clean:
-	@echo Cleaning tankgame-tn13
+	@echo Cleaning tankgame-tn14
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) rm -f  $(TARGET)
 	$(SILENT) rm -rf $(OBJDIR)
@@ -233,98 +210,6 @@ $(OBJDIR)/MapLoader.o: src/internal/MapLoader.cpp
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/TileManager.o: src/internal/TileManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom01Player.o: src/players/Nhom01/Nhom01Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom02Player.o: src/players/Nhom02/Nhom02Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom03Player.o: src/players/Nhom03/Nhom03Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom04Player.o: src/players/Nhom04/Nhom04Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom05Player.o: src/players/Nhom05/Nhom05Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom06Player.o: src/players/Nhom06/Nhom06Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom07Player.o: src/players/Nhom07/Nhom07Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom08Player.o: src/players/Nhom08/Nhom08Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/FirstStrategy.o: src/players/Nhom09/FirstStrategy.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Matrix.o: src/players/Nhom09/Matrix.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom09Player.o: src/players/Nhom09/Nhom09Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/SecondStrategy.o: src/players/Nhom09/SecondStrategy.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom10Player.o: src/players/Nhom10/Nhom10Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom11Player.o: src/players/Nhom11/Nhom11Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/MY_IStage.o: src/players/Nhom12/MY_IStage.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/MY_Special1.o: src/players/Nhom12/MY_Special1.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/MY_Stage1.o: src/players/Nhom12/MY_Stage1.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/MY_Strategy.o: src/players/Nhom12/MY_Strategy.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom12Player.o: src/players/Nhom12/Nhom12Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom13Player.o: src/players/Nhom13/Nhom13Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom14Player.o: src/players/Nhom14/Nhom14Player.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom14PlayerControl.o: src/players/Nhom14/Nhom14PlayerControl.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/Nhom15Player.o: src/players/Nhom15/Nhom15Player.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
