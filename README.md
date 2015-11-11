@@ -1,7 +1,7 @@
-tankgame-tn13
+tankgame-tn14
 =============
 
-Tank game for Graph Theory and Application project TN13
+Tank game for Graph Theory and Application project TN14
 
 -------------
 Build: use premake4.exe to generate solution files for visual studio
