@@ -1,3 +1,3 @@
 #!/bin/bash
 make
-./bin/tankgame-tn14
+./bin/tankgame-tn14 

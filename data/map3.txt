@@ -6,11 +6,9 @@ ab      // HeadquarterIDs
 AB      // PlayerIDs (TankIDs)
 102     // LandID WaterID SpringID
 100     // Maximum numer of steps
-4       // Number of tanks
+2       // Number of tanks
 0 0 5 10 3 // Tank B
-19 19 3 10 4 // Tank B
 19 0 3 10 4 // Tank A
-0 19 5 10 3 // Tank A
 B111111111111111111A
 1SSSSSSSS11SSSSSSSS1
 0T0000000||0000000T0
@@ -30,4 +28,4 @@ B111111111111111111A
 0T0111111111111110T0
 0T0000000||0000000T0
 1SSSSSSSS11SSSSSSSS1
-A111111111111111111B
+11111111111111111111

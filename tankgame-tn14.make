@@ -64,24 +64,24 @@ ifeq ($(config),release)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/BasePlayer.o \
+	$(OBJDIR)/IMap.o \
 	$(OBJDIR)/Command.o \
 	$(OBJDIR)/GameMain.o \
-	$(OBJDIR)/IMap.o \
+	$(OBJDIR)/BasePlayer.o \
 	$(OBJDIR)/utils.o \
-	$(OBJDIR)/AppConfig.o \
-	$(OBJDIR)/BaseGameModel.o \
-	$(OBJDIR)/BaseGameView.o \
-	$(OBJDIR)/BaseMap.o \
-	$(OBJDIR)/BaseMapObject.o \
-	$(OBJDIR)/BasePlayerInfo.o \
-	$(OBJDIR)/BaseSpring.o \
-	$(OBJDIR)/BaseTank.o \
-	$(OBJDIR)/ConcurrentGameController.o \
-	$(OBJDIR)/GameController.o \
-	$(OBJDIR)/GameCreator.o \
-	$(OBJDIR)/MapLoader.o \
 	$(OBJDIR)/TileManager.o \
+	$(OBJDIR)/BaseSpring.o \
+	$(OBJDIR)/BasePlayerInfo.o \
+	$(OBJDIR)/MapLoader.o \
+	$(OBJDIR)/AppConfig.o \
+	$(OBJDIR)/GameController.o \
+	$(OBJDIR)/ConcurrentGameController.o \
+	$(OBJDIR)/BaseGameModel.o \
+	$(OBJDIR)/BaseTank.o \
+	$(OBJDIR)/BaseMapObject.o \
+	$(OBJDIR)/GameCreator.o \
+	$(OBJDIR)/BaseMap.o \
+	$(OBJDIR)/BaseGameView.o \
 
 RESOURCES := \
 
@@ -141,7 +141,7 @@ $(GCH): $(PCH)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
-$(OBJDIR)/BasePlayer.o: src/BasePlayer.cpp
+$(OBJDIR)/IMap.o: src/IMap.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
@@ -153,7 +153,7 @@ $(OBJDIR)/GameMain.o: src/GameMain.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/IMap.o: src/IMap.cpp
+$(OBJDIR)/BasePlayer.o: src/BasePlayer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
@@ -161,27 +161,7 @@ $(OBJDIR)/utils.o: src/include/utils.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/AppConfig.o: src/internal/AppConfig.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/BaseGameModel.o: src/internal/BaseGameModel.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/BaseGameView.o: src/internal/BaseGameView.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/BaseMap.o: src/internal/BaseMap.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/BaseMapObject.o: src/internal/BaseMapObject.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/BasePlayerInfo.o: src/internal/BasePlayerInfo.cpp
+$(OBJDIR)/TileManager.o: src/internal/TileManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
@@ -189,19 +169,7 @@ $(OBJDIR)/BaseSpring.o: src/internal/BaseSpring.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/BaseTank.o: src/internal/BaseTank.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/ConcurrentGameController.o: src/internal/ConcurrentGameController.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/GameController.o: src/internal/GameController.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-
-$(OBJDIR)/GameCreator.o: src/internal/GameCreator.cpp
+$(OBJDIR)/BasePlayerInfo.o: src/internal/BasePlayerInfo.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
@@ -209,7 +177,39 @@ $(OBJDIR)/MapLoader.o: src/internal/MapLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/TileManager.o: src/internal/TileManager.cpp
+$(OBJDIR)/AppConfig.o: src/internal/AppConfig.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/GameController.o: src/internal/GameController.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/ConcurrentGameController.o: src/internal/ConcurrentGameController.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/BaseGameModel.o: src/internal/BaseGameModel.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/BaseTank.o: src/internal/BaseTank.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/BaseMapObject.o: src/internal/BaseMapObject.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/GameCreator.o: src/internal/GameCreator.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/BaseMap.o: src/internal/BaseMap.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/BaseGameView.o: src/internal/BaseGameView.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
