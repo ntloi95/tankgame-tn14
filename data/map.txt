@@ -1,11 +1,11 @@
-3 10 3 // TankHP TankAmmo TankRange
+3 100 10 // TankHP TankAmmo TankRange
 2 1 10 3 2 // BridgeHP BlockHP HeadHP SpringHP SpringIncHP
 -|      // BridgeIDs
 UVXYZ   // BlockIDs
 ab      // HeadquarterIDs
 AB      // PlayerIDs (TankIDs)
 102     // LandID WaterID SpringID
-100     // Maximum numer of steps
+1000     // Maximum numer of steps
 0       // all use default tanks
 000000001a
 0B11111110

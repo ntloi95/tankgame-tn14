@@ -1,14 +1,11 @@
-Setup
+Setup on MacOS
 =============
 
-MacOS
-
-For Unix-based (make), install premake4 and use
+- In root directory, run:
 premake4 gmake
 
-Install XQuartz and log out, log in again.
-https://www.xquartz.org/
--------------
+- Install XQuartz (https://www.xquartz.org/) after that, log out and log in again.
+
 
 Run
 =============
@@ -20,3 +17,6 @@ Press R/r to toggle between auto-run mode and manual mode.
 In manual mode, press SPACE to step.
 
 -------------
+
+Forked from my teacher's repository ([Hoang Hai Dang](https://github.com/hans89) and [Nguyen Kha Do](https://github.com/nguyenkha)).
+I'm really appreciated them and their work.
